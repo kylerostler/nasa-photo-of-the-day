@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 
+import { BASE_URL } from './constants';
+import { API_KEY } from './constants';
+
+
+
 function App() {
+  const [photo, setPhoto] = useState([]);
+  const [currentPicId, setCurrentPicId] = useState(null);
+
   return (
     <div className="App">
       <p>
