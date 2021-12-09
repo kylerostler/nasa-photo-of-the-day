@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 
 
 
@@ -9,17 +9,11 @@ import React, { useState, useEffect } from 'react'
 
 export default function NasaPhoto(props) {
     const { photoObj } = props
-    const [todaysPic, setTodaysPic] = useState(null);
-
-    useEffect(() => {
-        const fetchTodayPic = () => setTodaysPic(photoObj);
-        fetchTodayPic();
-    }, [photoObj])
-
 
  return (
      <div className='photo-container'>
-         <img src={todaysPic} alt='astronomy observation of the day'></img>
+        <h1>Astronomy Photo Of The Day: {photoObj.title}</h1>
+         <img src={photoObj.url} alt='astronomy observation of the day'></img>
      </div>
  )
 }
