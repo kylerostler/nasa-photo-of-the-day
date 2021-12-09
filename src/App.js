@@ -33,8 +33,7 @@ function App() {
   return (
     <div className="App">
       <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
+         This webpage sources Nasa's Astronomy Photo of the Day and displays it
       </p>
       <NasaPhoto photoObj={photoData}/>
       <NasaPhotoInfo photoObj={photoData}/>
