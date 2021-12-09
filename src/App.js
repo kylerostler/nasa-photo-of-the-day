@@ -9,7 +9,13 @@ import NasaDateCopyright from './components/NasaDateCopyright.js';
 import { BASE_URL } from './constants';
 import { API_KEY } from './constants';
 
+import styled from 'styled-components';
 
+
+const StyledHeader = styled.div`
+    background-color: ${props => props.theme.rust};
+    color: ${props => props.theme.cream};
+`
 
 function App() {
   const [photoData, setPhoto] = useState([]);
@@ -32,9 +38,9 @@ function App() {
 
   return (
     <div className="App">
-      <p>
+      <StyledHeader>
          This webpage sources Nasa's Astronomy Photo of the Day and displays it
-      </p>
+      </StyledHeader>
       <NasaPhoto photoObj={photoData}/>
       <NasaPhotoInfo photoObj={photoData}/>
       <NasaDateCopyright photoObj={photoData}/>

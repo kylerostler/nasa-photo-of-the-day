@@ -12,7 +12,6 @@ const kf = keyframes`
 const StyledPhoto = styled.div`
     background-color: ${props => props.theme.lilac};
     color: ${props => props.theme.coal};
-    border: 2px solid ${props => props.theme.rust};
     img {
     opacity: 0;
     transform: scale(2) rotateZ(180deg);

@@ -14,10 +14,10 @@ const kf = keyframes`
 const StyledInfo = styled.div`
     background-color: ${props => props.theme.cream};
     color: ${props => props.theme.coal};
-    transition: all 0.3s ease-in-out;
+    transition: all 3s ease-in-out;
     transform: scale(2); //start of animation
     opacity: 0; //start of animation
-    animation: ${kf} 0.3s ease-in-out forwards;
+    animation: ${kf} 3s ease-in-out forwards;
 `
 // component that makes a div containing the info related to 
 // the photo displayed in NasaPhoto.js
