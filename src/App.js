@@ -2,13 +2,16 @@ import Axios from "axios";
 import React, { useState, useEffect } from "react";
 import "./App.css";
 
+import NasaPhoto from "./components/NasaPhoto";
+
 import { BASE_URL } from './constants';
 import { API_KEY } from './constants';
 
-
+// import NasaDateCopyright from './components/NasaDateCopyright.js';
+// import NasaPhotoInfo from './components/NasaPhotoInfo';
 
 function App() {
-  const [photo, setPhoto] = useState([]);
+  const [photo, setPhoto] = useState(null);
   const [currentPicId, setCurrentPicId] = useState(null);
 
   useEffect(() => {
@@ -34,7 +37,7 @@ console.log(photo)
         Read through the instructions in the README.md file to build your NASA
         app! Have fun <span role="img" aria-label='go!'>🚀</span>!
       </p>
-      {/* <NasaPhoto /> */}
+      <NasaPhoto photoObj={photo}/>
     </div>
   );
 }
